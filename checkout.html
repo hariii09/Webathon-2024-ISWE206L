@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Confirmation</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body onload="loadOrderSummary()">
+    <h2>Order Summary</h2>
+
+
+    <table id="orderSummaryTable">
+        <thead>
+            <tr>
+                <th>Item</th>
+                <th>Quantity</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody id="orderDetails"></tbody>
+        <tfoot>
+            <tr>
+                <td colspan="2"><strong>Total</strong></td>
+                <td><strong>Rs<span id="orderTotal"></span></strong></td>
+            </tr>
+        </tfoot>
+    </table>
+
+
+    <div class="payment-method">
+        <label for="paymentSelect">Select Payment Method:</label>
+        <select id="paymentSelect">
+            <option value="">Select...</option>
+            <option value="UPI">UPI</option>
+            <option value="Credit Card">Credit Card</option>
+            <option value="Internet Banking">Internet Banking</option>
+        </select>
+    </div>
+
+
+    <button onclick="confirmOrder()">Confirm Order</button>
+</body>
+
+</html>

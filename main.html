@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eco-Friendly Marketplace</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <div class="welcome">
+        <h2>Welcome, <span id="displayUsername"></span>!</h2>
+    </div>
+
+    <h3>Eco-Friendly Product Marketplace</h3>
+
+    <table id="productTable">
+        <thead>
+            <tr>
+                <th>Select</th>
+                <th>Product</th>
+                <th>Quantity</th>
+                <th>Price (per item)</th>
+                <th>Total Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><input type="checkbox" class="product-checkbox" data-price="15"></td>
+                <td>Reusable Water Bottle</td>
+                <td>
+                    <select class="quantity" onchange="updateTotal()">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
+                </td>
+                <td>rs 15</td>
+                <td class="product-total-price">rs 0</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" class="product-checkbox" data-price="10"></td>
+                <td>Bamboo Toothbrush</td>
+                <td>
+                    <select class="quantity" onchange="updateTotal()">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
+                </td>
+                <td>rs 10</td>
+                <td class="product-total-price">rs 0</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" class="product-checkbox" data-price="5"></td>
+                <td>Paper Straw</td>
+                <td>
+                    <select class="quantity" onchange="updateTotal()">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
+                </td>
+                <td>rs 5</td>
+                <td class="product-total-price">rs 0</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" class="product-checkbox" data-price="8"></td>
+                <td>Wooden Spoons</td>
+                <td>
+                    <select class="quantity" onchange="updateTotal()">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
+                </td>
+                <td>rs 8</td>
+                <td class="product-total-price">rs 0</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" class="product-checkbox" data-price="12"></td>
+                <td>Cloth Bags</td>
+                <td>
+                    <select class="quantity" onchange="updateTotal()">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
+                </td>
+                <td>rs 12</td>
+                <td class="product-total-price">rs 0</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="checkout-container">
+        <p>Total: rs <span id="totalPrice">0</span></p>
+        <button onclick="checkout()">Checkout</button>
+    </div>
+
+    <div class="product-info">
+        <h4>Environmental Impact and Product Details</h4>
+        <div class="product-impact">
+            <img src="reusable_water_bottle.jpg" alt="Reusable Water Bottle" class="product-image">
+            <p><strong>Reusable Water Bottle:</strong> Reduces single-use plastic waste, conserving resources and minimizing ocean pollution. Durable and eco-friendly.</p>
+        </div>
+        <div class="product-impact">
+            <img src="bamboo_toothbrush.jpg" alt="Bamboo Toothbrush" class="product-image">
+            <p><strong>Bamboo Toothbrush:</strong> Made from natural bamboo, biodegradable, and a great alternative to plastic toothbrushes. Bamboo grows quickly and requires minimal resources.</p>
+        </div>
+        <div class="product-impact">
+            <img src="paper_straw.jpg" alt="Paper Straw" class="product-image">
+            <p><strong>Paper Straw:</strong> A compostable alternative to plastic straws, significantly reducing marine pollution. Made from sustainable sources and decomposes faster than plastic.</p>
+        </div>
+        <div class="product-impact">
+            <img src="wooden_spoons.jpg" alt="Wooden Spoons" class="product-image">
+            <p><strong>Wooden Spoons:</strong> Crafted from renewable wood resources, these spoons are biodegradable and lessen plastic dependency, contributing to reduced landfill waste.</p>
+        </div>
+        <div class="product-impact">
+            <img src="cloth_bag.jpg" alt="Cloth Bag" class="product-image">
+            <p><strong>Cloth Bag:</strong> Reusable and durable, cloth bags replace single-use plastic bags and reduce waste in landfills. Produced with sustainable materials, they offer a long-lasting alternative.</p>
+        </div>
+    </div>
+</body>
+
+</html>
